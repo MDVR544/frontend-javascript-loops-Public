@@ -23,6 +23,10 @@ const salaryDetails = [
 	{name: 'Otis', salary: 2800}
 ];
 
+for (let i = 0; i < salaryDetails.length; i++) {
+	console.log("'Beste " + salaryDetails[i].name + ", je salaris van €" + salaryDetails[i].salary + ",- is zojuist overgemaakt. Val me alsjeblieft niet meer lastig.'");
+}
+
 // ==========================================
 // Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
 // voldoende vrije dagen over heeft voor de aanvraag. En dat gaat nog wel eens mis... Zorg ervoor dat het aantal vakantiedagen
@@ -45,6 +49,12 @@ const vacationDays = [
 ];
 
 
+
+for (let i = 0; i < vacationDays.length; i++) {
+	const leftOverVacationDays = vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays;
+	console.log("'" + vacationDays[i].name + " heeft nog " + leftOverVacationDays + " vakantiedagen over.'");
+}
+
 // ==========================================
 // Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
 // in de maand januari. Schrijf een script dat de lijst doorloopt en voor iedere medewerker die een opleiding in januari volgt,
@@ -63,9 +73,15 @@ const employeesInTraining = [
 	{name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
 ];
 
+for (let i = 0; i < employeesInTraining.length; i++){
+	if (employeesInTraining[i].month === "Januari"){
+		console.log(employeesInTraining[i].name + ": " + employeesInTraining[i].training);
+	}
+}
+
 // ==========================================
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
-// naar percentages en toe te voegen aan de adminstratie. Schrijf een script dat de score van iedere medewerker in de
+// naar percentages en toe te voegen aan de administratie. Schrijf een script dat de score van iedere medewerker in de
 // array omzet naar een salarisverhoging-percentage en dit in de terminal print. De percentages zijn als volgt:
 // - minder dan 60 = 0%
 // - 60 tot 69 = 2%
@@ -89,6 +105,20 @@ const scores = [
 	{name: 'Otis', score: 100, salaryIncrease: null},
 ];
 
+for (let i = 0; i < scores.length; i++) {
+	if (scores[i].score >= 60 && scores[i].score <= 69) {
+		console.log("2%");
+	} else if (scores[i].score >= 70 && scores[i].score <= 89) {
+		console.log("3%");
+	} else if (scores[i].score >= 90 && scores[i].score <= 99) {
+		console.log("4%");
+	} else if (scores[i].score === 100) {
+		console.log("6%");
+	} else {
+		console.log("0%");
+	}
+}
+
 // ==========================================
 // Opdracht 4b. Breid je script uit door het percentage op te slaan in de 'salaryIncrease'-property van ieder object in de array.
 
@@ -104,7 +134,22 @@ const scores = [
 // ];
 // ==========================================
 
+	console.log(scores)
 
+for (let i = 0; i < scores.length; i++) {
+	if (scores[i].score >= 60 && scores[i].score <= 69) {
+		scores[i].salaryIncrease = "2%";
+	} else if (scores[i].score >= 70 && scores[i].score <= 89) {
+		scores[i].salaryIncrease = "3%";
+	} else if (scores[i].score >= 90 && scores[i].score <= 99) {
+		scores[i].salaryIncrease = "4%";
+	} else if (scores[i].score === 100) {
+		scores[i].salaryIncrease = "6%";
+	} else {
+		scores[i].salaryIncrease = "0%";
+	}
+}
+	console.log(scores)
 
 // ==========================================
 // Opdracht 5. Bob wil ervoor zorgen dat al zijn medewerkers een correct bedrijfs-e-mailadres hebben. Deze e-mailadressen moeten
@@ -131,9 +176,19 @@ const employees = [
 	{firstName: 'Otis', lastName: 'Kuiper'},
 ];
 
+	console.log(employees)
+
+for (let i = 0; i < employees.length; i++) {
+	const email = employees[i].firstName + "." + employees[i].lastName + "@loop-it-solutions.nl"
+	employees[i].email = email;
+	// volgende code regel is toegevoegd voor bonus opdracht 6
+	employees[i].email = employees[i].email.toLowerCase();
+}
+	console.log(employees);
+
+
 // ==========================================
 // Opdracht 6 (BONUS). Bob wil dat alle e-mailadressen in kleine letters worden opgeslagen, zodat ze consistent zijn.
 // Kun je je script aanpassen om dit voor elkaar te krijgen? Dit heb je nog niet geleerd, maar Google is your best friend...
 // ==========================================
-
 
