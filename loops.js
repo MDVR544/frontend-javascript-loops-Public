@@ -13,7 +13,7 @@
 const starIcon = "*";
 
 for (let i = 0; i < 6; i++) {
-    console.log(starIcon.repeat(i))
+    console.log(starIcon.repeat(i));
 }
 
 // ==========================================
@@ -75,14 +75,11 @@ for (let i = 1; i < 9; i++) {
 for (let i = 9; i < 19; i++) {
         if(i === 10 || i === 14 ){
         console.log(i + ":00 Koffiepauze!");
-        }
-        else if(i === 12){
+        } else if(i === 12){
         console.log(i + ":00 Lunchpauze!");
-        }
-        else if(i === 17){
+        } else if(i === 17){
         console.log(i + ":00 Bijna klaar...");
-        }
-        else{
+        } else{
         console.log(i + ":00");
         }
 }
@@ -106,11 +103,9 @@ for (let i = 9; i < 19; i++) {
 for (let i = 0; i < 10; i++) {
     if (i > 2 && i < 6){
         console.log("> " + i);
-    }
-    else if (i > 5){
+    } else if (i > 5){
         console.log(">> " + i);
-    }
-    else {
+    } else {
         console.log(i);
     }
 }
@@ -153,4 +148,14 @@ for (let i = 0; i < 10; i++) {
 // etc.
 // ==========================================
 
-
+for (let i = 1; i < 31; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0){
+        console.log("Fizz");
+    } else if (i % 5 === 0){
+        console.log("Buzz");
+    } else {
+    console.log(i);
+    }
+}
