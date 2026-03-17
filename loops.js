@@ -20,10 +20,15 @@
 // loop...
 // klaar!
 // ==========================================
-
-
+for (let i = 0; i < 5; i++) {
+    if (i < 4) {
+        console.log("loop...");
+    } else {
+        console.log("klaar!");
+    }
+}
 // ==========================================
-// Opdracht 3. Maak een for-loop die automatisch factuurnummers genereert in het formaat INV-0001, INV-0002, enzovoorts. Zorg ervoor dat je begint bij nummer 1 en dat de nummers oplopen. Er zijn in totaal 8 factuurnummers nodig.
+// Opdracht 3. Maak een for-loop die automatisch factuurnummers genereert in het formaat INV-0001, INV-0002, enzovoorts. Zorg ervoor dat je begint  bij nummer 1 en dat de nummers oplopen.Er zijn in totaal 8 factuurnummers nodig.
 
 // Verwachte uitkomst:
 // 'INV-0001'
@@ -37,6 +42,10 @@
 
 // ==========================================
 
+for (let i = 1; i < 9; i++) {
+    console.log("'INV-000" + i + "'");
+}
+
 // ==========================================
 // Opdracht 4. Schrijf een for-loop die van 9 tot en met 18 loopt en de uren logt.
 // - Bij 10:00 en 14:00 moet de tekst "Koffiepauze!" toegevoegd worden
@@ -45,16 +54,17 @@
 
 // Verwachte uitkomsten:
 // 9:00
-// 10:00
+// 10:00 Koffiepauze!
 // 11:00
 // 12:00 Lunchpauze!
 // 13:00
-// 14:00
+// 14:00 Koffiepauze!
 // 15:00
 // 16:00
 // 17:00 Bijna klaar...
 // 18:00
 // ==========================================
+
 
 
 // ==========================================
