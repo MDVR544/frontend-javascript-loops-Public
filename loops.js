@@ -72,7 +72,20 @@ for (let i = 1; i < 9; i++) {
 // 18:00
 // ==========================================
 
-
+for (let i = 9; i < 19; i++) {
+        if(i === 10 || i === 14 ){
+        console.log(i + ":00 Koffiepauze!");
+        }
+        else if(i === 12){
+        console.log(i + ":00 Lunchpauze!");
+        }
+        else if(i === 17){
+        console.log(i + ":00 Bijna klaar...");
+        }
+        else{
+        console.log(i + ":00");
+        }
+}
 
 // ==========================================
 // Opdracht 5. Maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
@@ -90,6 +103,17 @@ for (let i = 1; i < 9; i++) {
 // >> 9
 // ==========================================
 
+for (let i = 0; i < 10; i++) {
+    if (i > 2 && i < 6){
+        console.log("> " + i);
+    }
+    else if (i > 5){
+        console.log(">> " + i);
+    }
+    else {
+        console.log(i);
+    }
+}
 
 // ==========================================
 // Opdracht 6 (BONUS). Schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
@@ -128,6 +152,5 @@ for (let i = 1; i < 9; i++) {
 // FizzBuzz
 // etc.
 // ==========================================
-
 
 
